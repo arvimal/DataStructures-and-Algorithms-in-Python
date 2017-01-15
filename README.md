@@ -9,8 +9,8 @@
 Table of Contents
 =================
 
-    * [01. Linear Search](#01-linear-search)
-    * [02. Binary Search](#02-binary-search)
+* [01. Linear Search](#01-linear-search)
+* [02. Binary Search](#02-binary-search)
 
 ***
 
