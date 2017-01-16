@@ -192,7 +192,7 @@ Binary Search uses the following method, provided the dataset is sorted.
 
 
 
-![Binary Search - Source: Wikipedia](/home/vimal/Dropbox/CODE/Programming-Studies/Future-Googler/DataStructures-and-Algorithms-in-Python/Binary_Search_Depiction.svg.png  "Binary Search")
+![Binary Search - Source: Wikipedia](https://github.com/arvimal/DataStructures-and-Algorithms-in-Python/blob/master/Images/Binary_Search.png  "Binary Search")
 
 **Figure 1 : Binary Search - Source: Wikipedia**
 
