@@ -78,9 +78,9 @@ def binary_search(my_list, item):
     # Check if the middle element is our element-of-interest, ie.. `item`
     # If so, return the position of our element-of-interest.
         if mid_element == item:
-            print("Item is {0}".format(item))
-            print(my_list[mid_element])
-            return
+            print("\nYour search item {0} is at index {1}".format(
+                item, mid_position))
+            return mid_element
 
     # Check if the middle element is a value higher than our element-of-interest.
     # If so, our element-of-interest falls *below* the middle element
@@ -106,6 +106,5 @@ def binary_search(my_list, item):
 
 
 if __name__ == "__main__":
-    my_list = ['a', 'b', 'c', 'd', 'e', 'f']
-    # my_list = [1, 2, 3, 4, 5, 6]
-    binary_search(my_list, "f")
+    my_list = [1, 2, 3, 4, 5, 6]
+    binary_search(my_list, 3)
