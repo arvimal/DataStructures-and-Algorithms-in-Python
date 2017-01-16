@@ -198,16 +198,14 @@ Binary Search uses the following method, provided the dataset is sorted.
 
 The figure above shows how Binary Search works on a dataset of 16 elements, to find the element 7.
 
-- Index 0 , Index 16, and the middle index are noted.
-- Subsequent values/elements at these indices are found out as well.
-- Check if the element of interest 7 is equal to, lower, or higher than the middle element 14 at index 8.
-- Since it's lower and the dataset is sorted in an increasing order, the search moves to the left of the middle index, ie.. from index 0 to index 7.
-----
-- The lower index is now 0, the higher index is now 7, and the middle index is now 3, the element in the middle index is 6.
-- Check if the element of interest 7 is lower or higher than the middle element 6 at index 3.
-- Since it's higher and the dataset is sorted in an increasing order, the search moves to the right of the middle index, ie.. from index 4 to index 7.
-----
-- So on and so forth.. till we arrive at the element of interest, ie.. 7.
+1. Index 0 , Index 16, and the middle index are noted.
+2. Subsequent values/elements at these indices are found out as well.
+3. Check if the element of interest 7 is equal to, lower, or higher than the middle element 14 at index 8.
+4. Since it's lower and the dataset is sorted in an increasing order, the search moves to the left of the middle index, ie.. from index 0 to index 7.
+5. The lower index is now 0, the higher index is now 7, and the middle index is now 3, the element in the middle index is 6.
+6. Check if the element of interest 7 is lower or higher than the middle element 6 at index 3.
+7. Since it's higher and the dataset is sorted in an increasing order, the search moves to the right of the middle index, ie.. from index 4 to index 7.
+8. So on and so forth.. till we arrive at the element of interest, ie.. 7.
 
 As noted eariler, the data set is divided into half in each iteration. A numeric representation on how Binary search progresses can be seen as:
 

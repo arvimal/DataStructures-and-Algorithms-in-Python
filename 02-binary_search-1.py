@@ -2,6 +2,7 @@
 
 # Binary Search Algorithm
 # Example 1
+# This deals with a dataset sorted in increased order.
 
 # A Binary Search Algorithm searches an Array/List for an element.
 # The Array/List has to be sorted in order to get Binary Search to work.

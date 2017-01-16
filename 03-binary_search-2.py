@@ -1,3 +1,10 @@
+#!/usr/bin/env python3
+
+# Binary Search
+# Example 2
+# This deals with a dataset sorted in increased order.
+
+
 def binary_search(my_list, item):
 
     # Find and set the low and high positions of the data set
