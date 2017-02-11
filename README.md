@@ -10,6 +10,7 @@ Table of Contents
 * [01. Linear Search](#01-linear-search)
 * [02. Binary Search](#02-binary-search)
 * [03. Selection Sort](#03-selection-sort)
+* [04. Recursion](#04-recursion)
 
 
 ***
@@ -488,10 +489,63 @@ def selection_sort(my_list):
 ### Observations:
 
 1.Selection Sort is an algorithm to sort a data set, but it is not particularly fast.
-2. It takes `n` iterations in each step to find the biggest element in that iteration.
-3. The next iteration has to run on a data set of `n - 1` elements comapred to the previous iteration.
-4. For `n` elements in a sample space, Selection Sort takes `n x n` iterations to sort the data set. 
+2.It takes `n` iterations in each step to find the biggest element in that iteration.
+3.The next iteration has to run on a data set of `n - 1` elements comapred to the previous iteration.
+4.For `n` elements in a sample space, Selection Sort takes `n x n` iterations to sort the data set. 
 
 #### References:
 1. [https://en.wikipedia.org/wiki/Selection_sort](https://en.wikipedia.org/wiki/Selection_sort)
 2. [http://bigocheatsheet.com/](http://bigocheatsheet.com/)
+
+
+## 04. Recursion
+
+
+### Introduction
+
+### How does Algo/DS-name work?
+
+### Performance / Time Complexity
+
+#### 1. Worst-case performance:
+#### 2. Best-case performance: 
+#### 3. Average performance: 
+
+###Code
+
+##### Example 1:
+##### Code explanation
+##### Example 2:
+
+### Observations:
+
+### References:
+
+
+----
+----
+Boilerplate:
+## num. Algo/DS name
+
+### Introduction
+
+### How does Algo/DS-name work?
+
+### Performance / Time Complexity
+
+#### 1. Worst-case performance: 
+#### 2. Best-case performance: 
+#### 3. Average performance: 
+
+###Code
+
+##### Example 1:
+##### Code explanation
+##### Example 2:
+
+### Observations:
+
+### References:
+
+1.[Grokking Algorithms](http://www.amazon.in/Grokking-Algorithms-illustrated-programmers-curious/dp/1617292230/ref=sr_1_1?s=books&ie=UTF8&qid=1486811444&sr=1-1&keywords=grokking+algorithms)
+2.
