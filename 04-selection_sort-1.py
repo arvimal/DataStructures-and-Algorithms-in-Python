@@ -4,14 +4,14 @@
 # Example 1
 
 # Selection Sort is a sorting algorithm used to sort a data set either in
-# incremental or decremental order. 
+# incremental or decremental order.
 
 # How does Selection sort work?
 
-# 1. Iterate through the data set one element at a time. 
-# 2. Find the biggest element in the data set (Append it to another if needed) 
-# 3. Reduce the sample space to `n - 1` by the biggest element just found. 
-# 4. Start the iteration over again, on the reduced sample space. 
+# 1. Iterate through the data set one element at a time.
+# 2. Find the biggest element in the data set (Append it to another if needed)
+# 3. Reduce the sample space to `n - 1` by the biggest element just found.
+# 4. Start the iteration over again, on the reduced sample space.
 # 5. Continue till we have a sorted data set, either incremental or decremental
 
 
@@ -60,6 +60,19 @@
 
 # Final thoughts:
 # Selection Sort is an algorithm to sort a data set, but it is not particularly
-# fast. For `n` elements in a sample space, Selection Sort takes `n x n` 
-# iterations to sort the data set. 
+# fast. For `n` elements in a sample space, Selection Sort takes `n x n`
+# iterations to sort the data set.
 
+def findsmallest(my_list)):
+	smallest=my_list[0]
+	smallest_index=0
+
+	for i in range(1, len(my_list)):
+		if my_list(i) < smallest:
+			smallest=my_list(i)
+			smallest_index=i
+	return smallest_index
+
+def selection_sort(my_list):
+	new_list=[]
+	for i in range(len(my_list))

@@ -1,13 +1,11 @@
-# DataStructures and Algorithms in Python
+# DataStructures and Algorithms, in Python
 
-* This is a collection of code snippets and notes made while studying Algorithms and Data Structures.
-
-* All of the code here is in Python.
+This is a collection of code-snippets/notes created while studying Algorithms and Data Structures.
 
 ***
 
 Table of Contents
-=================
+====
 
 * [01. Linear Search](#01-linear-search)
 * [02. Binary Search](#02-binary-search)
@@ -18,6 +16,8 @@ Table of Contents
 
 ## 01. Linear Search
 
+### Introduction
+
 Linear Search is an algorithm to search a data set for an element of interest. It is one of the many search algorithms available and is also the most direct and simple of the lot.
 
 Linear search looks for the element of interest in a dataset starting from the first element and moves on to the consecutive elements till it finds the one we’re interested in. Due to this behaviour, it’s not the fastest search algorithm around.
@@ -26,7 +26,7 @@ In the worst case, when the element of interest is the last one (or near-last) i
 
 Linear search works on a sorted or unsorted data set equally since it has to go through the elements one by one, and doesn’t mind if the data is ordered or not.
 
-### Performance
+### Performance / Time Complexity
 
 #### 1. Worst-case performance: O(n)
 
@@ -44,17 +44,7 @@ In the best-case, where the element-of-interest is the first element in the data
 
 On an average, the performance can be denoted as O(n/2).
 
-### Observations:
-
-Linear Search iterates through every element in the dataset until it finds the match.
-In Linear Search, the number of iterations grows linearly if the data set grows in size.
-This algorithm is called  Linear Search  due to this linear increase in the complexity depending on the dataset.
-The Best case is when the first iteration finds the element.
-The Worst case is when the element of interest is not present in the dataset.
-A very near worse case is when the element of interest is the last one in the dataset.
-How does Linear Search work?
-
-#### Linear search progresses as following:
+#### How does Linear search work?
 
 1. Takes in a dataset as well as an element of interest.
 2. Checks if the first element is the element of interest.
@@ -119,6 +109,15 @@ if __name__ == "__main__":
     linear_search(my_list, 16)
 ```
 
+### Observations:
+
+* Linear Search iterates through every element in the dataset until it finds the match.
+* In Linear Search, the number of iterations grows linearly if the data set grows in size.
+* This algorithm is called  Linear Search  due to this linear increase in the complexity depending on the dataset.
+* The Best case is when the first iteration finds the element.
+* The Worst case is when the element of interest is not present in the dataset.
+* A very near worse case is when the element of interest is the last one in the dataset.
+
 ***
 
 ## 02. Binary Search
@@ -135,11 +134,9 @@ The element of interest is returned if it is present in the dataset, else a NULL
 
 ***Note:***
 
-- Binary search will only work effectively on a Sorted collection.
-- The code implementation will need minor changes depending on how the dataset is sorted, ie.. either in an increasing order or in a decreasing order.
+* Binary search will only work effectively on a Sorted collection.
 
-
-### Performance
+### Performance / Time Complexity
 
 #### 1. Worst-case performance: log(n)
 
@@ -176,6 +173,10 @@ The best case scenario is when the element of interest is found in the first ite
 
 ie.. The best-case scenario would be O(1).
 
+####3. Average performance
+
+[add notes]
+
 ### How does Binary Search work?
 
 Imagine a sorted dataset of 100 numbers and we're searching for  98 is in the list. A simple search would start from index 0 , moves to the element at index 1, progresses element by element until the one in interest is found. Since we're searching for 98, it'll take n iterations depending on the number of elements between the first element in the dataset and 98.
@@ -191,7 +192,6 @@ Binary Search uses the following method, provided the dataset is sorted.
 - If it is lower, move the highest index to one below the middle index. 
 - Check if the element of interest is the middle-element in the new/shorter dataset.
 - Continue till the element of interest is found.
-
 
 
 ![Binary Search - Source: Wikipedia](https://github.com/arvimal/DataStructures-and-Algorithms-in-Python/blob/master/Images/Binary_Search.png  "Binary Search")
@@ -215,7 +215,6 @@ As noted eariler, the data set is divided into half in each iteration. A numeric
 ***
 
 100 elements -> 50 elements -> 25 elements -> 12 elements -> 6 elements - 3 elements -> 1 element
-
 
 ***
 
@@ -271,12 +270,9 @@ def binary_search(my_list, item):
     # returns None.
     return None
 
-
 if __name__ == "__main__":
     my_list = [1, 2, 3, 4, 5, 6]
     binary_search(my_list, 3)
-
-
 ```
 
 ##### Example 2 : (Same as above, but with more statements explaining how it works)
@@ -357,12 +353,9 @@ def binary_search(my_list, item):
     print("Element of interest not in dataset\n")
     return None
 
-
 if __name__ == "__main__":
     my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
     binary_search(my_list, 13)
-
-
 ```
 
 ### Observations:
@@ -374,23 +367,33 @@ if __name__ == "__main__":
 
 ### References:
 
-- [https://en.wikipedia.org/wiki/Binary_search_algorithm](https://en.wikipedia.org/wiki/Binary_search_algorithm)
-- [http://quiz.geeksforgeeks.org/binary-search/](http://quiz.geeksforgeeks.org/binary-search/)
-- [https://www.hackerearth.com/practice/algorithms/searching/binary-search/tutorial/](https://www.hackerearth.com/practice/algorithms/searching/binary-search/tutorial/)
-- [http://research.cs.queensu.ca/home/cisc121/2006s/webnotes/search.html](http://research.cs.queensu.ca/home/cisc121/2006s/webnotes/search.html)
+1. [http://bigocheatsheet.com/](http://bigocheatsheet.com/)
+2. [https://en.wikipedia.org/wiki/Binary_search_algorithm](https://en.wikipedia.org/wiki/Binary_search_algorithm)
+3. [http://quiz.geeksforgeeks.org/binary-search/](http://quiz.geeksforgeeks.org/binary-search/)
+4. [https://www.hackerearth.com/practice/algorithms/searching/binary-search/tutorial/](https://www.hackerearth.com/practice/algorithms/searching/binary-search/tutorial/)
+5. [http://research.cs.queensu.ca/home/cisc121/2006s/webnotes/search.html](http://research.cs.queensu.ca/home/cisc121/2006s/webnotes/search.html)
 
 
 ## 03. Selection Sort
 
+### Introduction
 
 Selection Sort is a sorting algorithm used to sort a data set either in incremental or decremental order. 
 
+It goes through the entire elements one by one and hence it's not a very efficient algorithm to work on large data sets.
+
 ### How does Selection sort work?
+
+Selection sort starts with an un-sorted data set. With each iteration, it builds up a sub data-set with the sorted data.
+
+By the end of the sorting process, the sub data-set contains the entire elements in a sorted order.
+
+The steps can be described as following:
 
 1. Iterate through the data set one element at a time. 
 2. Find the biggest element in the data set (Append it to another if needed) 
-3. Reduce the sample space to `n - 1` by the biggest element just found. 
-4. Start the iteration over again, on the reduced sample space. 
+3. Reduce the sample space by the biggest element just found. The new data set becomes `n - 1` compared to the previous iteration.
+4. Start over the iteration again, on the reduced sample space.
 5. Continue till we have a sorted data set, either incremental or decremental
 
 ### How does the data sample reduces in each iteration?
@@ -408,6 +411,7 @@ Selection Sort is a sorting algorithm used to sort a data set either in incremen
 
 Let's check what the Selection Sort algorithm has to go through in each iteration
 
+
 ```bash
 [10, 4, 9, 3, 6, 19, 8]		- Data set
 [10, 4, 9, 3, 6, 8] 		- After Iteration 1
@@ -419,15 +423,11 @@ Let's check what the Selection Sort algorithm has to go through in each iteratio
 [3, 4, 6, 8, 9, 10, 19]		- After Iteration 7 - Sorted data set
 ```
 
-### Observations:
+### Performance / Time Complexity
 
-1. Selection Sort takes `n` iterations in each step to find the biggest element.
-2. The next iteration has to run on a data set of `n - 1` elements.
-3. Hence the total number of overall iterations would be:
+Selection Sort has to go through all the elements in the data set, no matter what.
 
-```bash
-n + (n - 1) + (n - 2) + (n - 3) + ..... 3 + 2 + 1
-```
+Hence, the Worst case, Best case and Average Time Complexity would be O(n^2).
 
 Since `Selection Sort` takes in `n` elements while starting, and goes through the data set `n` times (each step reducing the data set size by 1 member), the iterations would be:
 
@@ -435,9 +435,7 @@ Since `Selection Sort` takes in `n` elements while starting, and goes through th
 n + [ (n - 1) + (n - 2) + (n - 3) + (n - 4) + ... + 2 + 1 ]
 ```
 
-### Efficiency:
-
-We are interested in the worse-case scenario. In a very large data set, an `n - 1`, `n - 2` etc.. won't make a difference.
+We are more interested in the worse-case scenario. In a very large data set, an `n - 1`, `n - 2` etc.. won't make a difference.
 
 Hence we can re-write the above iterations as:
 
@@ -448,12 +446,52 @@ n + [n + n + n + n ..... n]
 Or also as:
 
 ```bash
-n x n = n**2
-
-O(n**2)
+n x n (n^2)
 ```
-### Final thoughts:
 
-Selection Sort is an algorithm to sort a data set, but it is not particularly fast. 
-For `n` elements in a sample space, Selection Sort takes `n x n` iterations to sort the data set. 
+#### 1. Worst-case performance: 
 
+O(n^2)
+
+#### 2. Best-case performance:
+
+O(n^2)
+
+#### 3. Average performance: 
+
+O(n^2)
+
+### Code
+
+##### Example 1
+
+```python
+def find_smallest(my_list):
+
+    smallest = my_list[0]
+    smallest_index = 0
+
+    for i in range(1, len(my_list)):
+        if my_list[i] < smallest:
+            smallest = my_list[i]
+            smallest_index = i
+    return smallest_index
+
+def selection_sort(my_list):
+    new_list = []
+    for i in range(len(my_list)):
+        smallest = find_smallest(my_list)
+        new_list.append(my_list.pop(smallest))
+    return new_list
+```
+
+### Observations:
+
+1.Selection Sort is an algorithm to sort a data set, but it is not particularly fast.
+2. It takes `n` iterations in each step to find the biggest element in that iteration.
+3. The next iteration has to run on a data set of `n - 1` elements comapred to the previous iteration.
+4. For `n` elements in a sample space, Selection Sort takes `n x n` iterations to sort the data set. 
+
+#### References:
+1. [https://en.wikipedia.org/wiki/Selection_sort](https://en.wikipedia.org/wiki/Selection_sort)
+2. [http://bigocheatsheet.com/](http://bigocheatsheet.com/)
