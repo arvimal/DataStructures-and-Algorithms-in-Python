@@ -11,6 +11,8 @@ Table of Contents
 
 * [01. Linear Search](#01-linear-search)
 * [02. Binary Search](#02-binary-search)
+* [03. Selection Sort](#03-selection-sort)
+
 
 ***
 
@@ -61,7 +63,7 @@ How does Linear Search work?
 5. Iterate till the dataset is exhausted.
 6. Return  None if the element of interest is not present in the dataset.
 
-### Example 1:
+##### Example 1:
 
 ```python
 def linear_search(my_list, item):
@@ -85,7 +87,7 @@ if __name__ == "__main__":
     linear_search(my_list, 5)
 ```
 
-### Example 2:
+##### Example 2:
 
 This is the same example as above, but with a little more information being printed out.
 
@@ -219,7 +221,7 @@ As noted eariler, the data set is divided into half in each iteration. A numeric
 
 ### Code
 
-#### Example 1 : (Data set sorted in Increasing order)
+##### Example 1 : (Data set sorted in Increasing order)
 
 ```python
 def binary_search(my_list, item):
@@ -277,7 +279,7 @@ if __name__ == "__main__":
 
 ```
 
-#### Example 2 : (Same as above, but with more statements explaining how it works)
+##### Example 2 : (Same as above, but with more statements explaining how it works)
 
 ```python
 #!/usr/bin/env python3
@@ -362,13 +364,6 @@ if __name__ == "__main__":
 
 
 ```
-#### Example 3 : (Data set sorted in Decreasing order)
-
-```python
-def binary_search(my_list, item):
-    pass
-    
-```
 
 ### Observations:
 
@@ -385,4 +380,80 @@ def binary_search(my_list, item):
 - [http://research.cs.queensu.ca/home/cisc121/2006s/webnotes/search.html](http://research.cs.queensu.ca/home/cisc121/2006s/webnotes/search.html)
 
 
+## 03. Selection Sort
+
+
+Selection Sort is a sorting algorithm used to sort a data set either in incremental or decremental order. 
+
+### How does Selection sort work?
+
+1. Iterate through the data set one element at a time. 
+2. Find the biggest element in the data set (Append it to another if needed) 
+3. Reduce the sample space to `n - 1` by the biggest element just found. 
+4. Start the iteration over again, on the reduced sample space. 
+5. Continue till we have a sorted data set, either incremental or decremental
+
+### How does the data sample reduces in each iteration?
+
+```bash
+[10, 4, 9, 3, 6, 19, 8] 	- Data set
+[10, 4, 9, 3, 6, 8] - [19] 	- After Iteration 1
+[4, 9, 3, 6, 8] - [10, 19] 	- After Iteration 2
+[4, 3, 6, 8] - [9, 10, 19] 	- After Iteration 3
+[4, 3, 6] - [8, 9, 10, 19] 	- After Iteration 4
+[4, 3] - [6, 8, 9, 10, 19] 	- After Iteration 5
+[3] - [4, 6, 8, 9, 10, 19] 	- After Iteration 6
+[3, 4, 6, 8, 9, 10, 19]  	- After Iteration 7 - Sorted data set
+```
+
+Let's check what the Selection Sort algorithm has to go through in each iteration
+
+```bash
+[10, 4, 9, 3, 6, 19, 8]		- Data set
+[10, 4, 9, 3, 6, 8] 		- After Iteration 1
+[4, 9, 3, 6, 8]			- After Iteration 2
+[4, 3, 6, 8] 			- After Iteration 3
+[4, 3, 6]			- After Iteration 4
+[4, 3]				- After Iteration 5
+[3]				- After Iteration 6
+[3, 4, 6, 8, 9, 10, 19]		- After Iteration 7 - Sorted data set
+```
+
+### Observations:
+
+1. Selection Sort takes `n` iterations in each step to find the biggest element.
+2. The next iteration has to run on a data set of `n - 1` elements.
+3. Hence the total number of overall iterations would be:
+
+```bash
+n + (n - 1) + (n - 2) + (n - 3) + ..... 3 + 2 + 1
+```
+
+Since `Selection Sort` takes in `n` elements while starting, and goes through the data set `n` times (each step reducing the data set size by 1 member), the iterations would be:
+
+```bash
+n + [ (n - 1) + (n - 2) + (n - 3) + (n - 4) + ... + 2 + 1 ]
+```
+
+### Efficiency:
+
+We are interested in the worse-case scenario. In a very large data set, an `n - 1`, `n - 2` etc.. won't make a difference.
+
+Hence we can re-write the above iterations as:
+
+```bash
+n + [n + n + n + n ..... n]
+```
+
+Or also as:
+
+```bash
+n x n = n**2
+
+O(n**2)
+```
+### Final thoughts:
+
+Selection Sort is an algorithm to sort a data set, but it is not particularly fast. 
+For `n` elements in a sample space, Selection Sort takes `n x n` iterations to sort the data set. 
 
