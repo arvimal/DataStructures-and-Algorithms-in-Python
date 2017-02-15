@@ -125,7 +125,7 @@ if __name__ == "__main__":
 
 ###Introduction
 
-Binary Search is a search method used to find an object in a data set. This is much faster compared to the Linear Search algorithm we saw in a previous post. 
+Binary Search is a search method used to find an object in a data set. This is much faster compared to the Linear Search algorithm we saw in a previous post.
 
 This algorithm works on the Divide and Conquer principle. Binary Search gets its speed by essentially dividing the list/array in half in each iteration, thus reducing the data-set size for the next iteration.
 
@@ -161,7 +161,7 @@ For a data set of 50,000 elements, Binary Search takes 16 iterations in the wors
 ```python
 In [1]: import math
 
-In [2]: math.log(50000, 2) 
+In [2]: math.log(50000, 2)
 Out[2]: 15.609640474436812
 ```
 
@@ -190,7 +190,7 @@ Binary Search uses the following method, provided the dataset is sorted.
 - Check if the element of interest is the middle-element.
 - If not, check if the element-of-interest is higher or lower than the middle element.
 - If it is higher, assuming the dataset is sorted in an increasing order, move the lower index to one above the middle index.
-- If it is lower, move the highest index to one below the middle index. 
+- If it is lower, move the highest index to one below the middle index.
 - Check if the element of interest is the middle-element in the new/shorter dataset.
 - Continue till the element of interest is found.
 
@@ -379,7 +379,7 @@ if __name__ == "__main__":
 
 ### Introduction
 
-Selection Sort is a sorting algorithm used to sort a data set either in incremental or decremental order. 
+Selection Sort is a sorting algorithm used to sort a data set either in incremental or decremental order.
 
 It goes through the entire elements one by one and hence it's not a very efficient algorithm to work on large data sets.
 
@@ -391,8 +391,8 @@ By the end of the sorting process, the sub data-set contains the entire elements
 
 The steps can be described as following:
 
-1. Iterate through the data set one element at a time. 
-2. Find the biggest element in the data set (Append it to another if needed) 
+1. Iterate through the data set one element at a time.
+2. Find the biggest element in the data set (Append it to another if needed)
 3. Reduce the sample space by the biggest element just found. The new data set becomes `n - 1` compared to the previous iteration.
 4. Start over the iteration again, on the reduced sample space.
 5. Continue till we have a sorted data set, either incremental or decremental
@@ -450,7 +450,7 @@ Or also as:
 n x n (n^2)
 ```
 
-#### 1. Worst-case performance: 
+#### 1. Worst-case performance:
 
 O(n^2)
 
@@ -458,7 +458,7 @@ O(n^2)
 
 O(n^2)
 
-#### 3. Average performance: 
+#### 3. Average performance:
 
 O(n^2)
 
@@ -489,9 +489,12 @@ def selection_sort(my_list):
 ### Observations:
 
 1.Selection Sort is an algorithm to sort a data set, but it is not particularly fast.
+
 2.It takes `n` iterations in each step to find the biggest element in that iteration.
+
 3.The next iteration has to run on a data set of `n - 1` elements comapred to the previous iteration.
-4.For `n` elements in a sample space, Selection Sort takes `n x n` iterations to sort the data set. 
+
+4.For `n` elements in a sample space, Selection Sort takes `n x n` iterations to sort the data set.
 
 #### References:
 1. [https://en.wikipedia.org/wiki/Selection_sort](https://en.wikipedia.org/wiki/Selection_sort)
@@ -500,26 +503,84 @@ def selection_sort(my_list):
 
 ## 04. Recursion
 
-
 ### Introduction
 
-### How does Algo/DS-name work?
+Recursion is a technique where a function calls itself until a condition is met.
+
+A typical example of recursion is a `factorial` function.
+
+### How does Recursion work?
+
+A recursion function calls itself, to reach
+
+There is a `Base` case and a `Recursive` case.
+
 
 ### Performance / Time Complexity
 
 #### 1. Worst-case performance:
-#### 2. Best-case performance: 
-#### 3. Average performance: 
+#### 2. Best-case performance:
+#### 3. Average performance:
 
 ###Code
 
 ##### Example 1:
-##### Code explanation
+
+* A `factorial` function in a `while` loop:
+
+```python
+def fact(n):
+    factorial = 1
+    while n > 1:
+        factorial = factorial * n
+        n = n - 1
+    return factorial
+
+print("Factorial of {0} is {1}".format(10, fact(10)))
+print("Factorial of {0} is {1}".format(20, fact(20)))
+print("Factorial of {0} is {1}".format(30, fact(30)))
+print("Factorial of {0} is {1}".format(40, fact(40)))
+```
+
+* The same function above, in a `recursive` loop:
+
+```python
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+print("Factorial of {0} is {1}".format(10, factorial(10)))
+print("Factorial of {0} is {1}".format(20, factorial(20)))
+print("Factorial of {0} is {1}".format(30, factorial(30)))
+print("Factorial of {0} is {1}".format(40, factorial(40)))
+```
+
 ##### Example 2:
+
+* A `sum` function in a normal loop
+
+
+* The same `sum` function above, in a `recursive` loop.
+
+```python
+def sum(my_list):
+    if my_list = []:
+        return 0
+    else:
+        return my_list[0] + my_list[1:]
+```
+
+##### Code explanation
 
 ### Observations:
 
 ### References:
+
+1.[Grokking Algorithms](http://www.amazon.in/Grokking-Algorithms-illustrated-programmers-curious/dp/1617292230/ref=sr_1_1?s=books&ie=UTF8&qid=1486811444&sr=1-1&keywords=grokking+algorithms)
+
+2.[Data Structures and Algorithms in Python](https://www.amazon.com/Structures-Algorithms-Python-Michael-Goodrich/dp/812656217X/ref=sr_1_1?ie=UTF8&qid=1487126103&sr=8-1&keywords=data+structures+and+algorithms+in+python)
 
 
 ----
@@ -533,9 +594,9 @@ Boilerplate:
 
 ### Performance / Time Complexity
 
-#### 1. Worst-case performance: 
-#### 2. Best-case performance: 
-#### 3. Average performance: 
+#### 1. Worst-case performance:
+#### 2. Best-case performance:
+#### 3. Average performance:
 
 ###Code
 
@@ -547,5 +608,3 @@ Boilerplate:
 
 ### References:
 
-1.[Grokking Algorithms](http://www.amazon.in/Grokking-Algorithms-illustrated-programmers-curious/dp/1617292230/ref=sr_1_1?s=books&ie=UTF8&qid=1486811444&sr=1-1&keywords=grokking+algorithms)
-2.
