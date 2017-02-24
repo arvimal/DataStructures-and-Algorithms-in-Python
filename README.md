@@ -566,10 +566,13 @@ print("Factorial of {0} is {1}".format(40, factorial(40)))
 
 ```python
 def sum(my_list):
-    if my_list = []:
+    if my_list == []:
         return 0
     else:
-        return my_list[0] + my_list[1:]
+        return my_list[0] + sum(my_list[1:])
+
+
+print(sum([10, 23, 14, 12, 11, 94, 20]))
 ```
 
 ##### Code explanation
