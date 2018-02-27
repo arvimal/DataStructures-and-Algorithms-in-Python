@@ -123,7 +123,7 @@ if __name__ == "__main__":
 
 ## 02. Binary Search
 
-###Introduction
+### Introduction
 
 Binary Search is a search method used to find an object in a data set. This is much faster compared to the Linear Search algorithm we saw in a previous post.
 
@@ -174,7 +174,7 @@ The best case scenario is when the element of interest is found in the first ite
 
 ie.. The best-case scenario would be O(1).
 
-####3. Average performance
+#### 3. Average performance
 
 [add notes]
 
